@@ -9,7 +9,7 @@ using VkNet.Enums.Filters;
 using VkNet.Model;
 using VkNet.Model.RequestParams;
 
-namespace ClassLibrary
+namespace DataCollection
 {
     public class DataCollection
     {
@@ -24,7 +24,7 @@ namespace ClassLibrary
         {
             var authparams = new ApiAuthParams
             {
-                ApplicationId = 5462485,
+                ApplicationId = 5779403,
                 Login = login,
                 Password = pass,
                 Settings = Settings.All
