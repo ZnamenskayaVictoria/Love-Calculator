@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using VkNet;
 using VkNet.Enums.Filters;
+using VkNet.Model.Attachments;
 using VkNet.Model.RequestParams;
 
 namespace LoveCalculatorApp.VKInteraction
@@ -11,7 +12,7 @@ namespace LoveCalculatorApp.VKInteraction
     class Publisher
     {
         private ulong appID = 5779403;
-        
+
         /// <summary>
         /// Post message on the wall 
         /// </summary>
@@ -32,7 +33,12 @@ namespace LoveCalculatorApp.VKInteraction
             api.Wall.Post(new WallPostParams
             {
                 OwnerId = api.UserId,
-                Message = message
+                Message = message,
+                // add picture
+                Attachments = new MediaAttachment[]
+                {
+                    api.Photo.GetById(new string[] {"22221840_456239291"})[0]
+                }
             });
         }
     }
