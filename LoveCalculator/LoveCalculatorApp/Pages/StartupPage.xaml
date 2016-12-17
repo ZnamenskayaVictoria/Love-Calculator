@@ -1,0 +1,18 @@
+﻿<Page x:Class="LoveCalculatorApp.Pages.StartupPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LoveCalculatorApp.Pages"
+      mc:Ignorable="d" 
+      ShowsNavigationUI="False"
+      Title="Love Calculator" Background="#EFB0A1" Loaded="StartupPage_OnLoaded">
+
+    <Grid>
+        <StackPanel Height="Auto">
+            <Label Foreground="#605856" HorizontalAlignment="Center" FontSize="96" FontFamily="Edwardian Script ITC" Margin="5">Love Calculator</Label>
+            <Button Click="Compatibility_OnClick" Foreground="#605856" Background="Transparent" Margin="5" FontSize="48" BorderBrush="Transparent" FontFamily="Pristina">Compatibility</Button>
+            <Button Click="PerfectMatch_OnClick" Foreground="#605856" Background="Transparent" Margin="5" FontSize="48" BorderBrush="Transparent" FontFamily="Pristina">Perfect match</Button>
+        </StackPanel>
+    </Grid>
+</Page>

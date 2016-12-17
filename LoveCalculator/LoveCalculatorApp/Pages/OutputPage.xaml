@@ -1,0 +1,19 @@
+﻿<Page x:Class="LoveCalculatorApp.Pages.OutputPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LoveCalculatorApp.Pages"
+      mc:Ignorable="d" 
+      Title="Result" Background="#EFB0A1">
+
+    <Grid>
+        <StackPanel>
+            <Label x:Name="CompLabel" HorizontalAlignment="Center" Foreground="#605856" Background="Transparent" Margin="5" FontSize="48" BorderBrush="Transparent" FontFamily="Pristina">Compatibility percent</Label>
+            <Label x:Name="MatchLabel" HorizontalAlignment="Center" Foreground="#605856" Background="Transparent" Margin="5" FontSize="48" BorderBrush="Transparent" FontFamily="Pristina">Perfect match date of birth</Label>
+            <Label x:Name="ResultLabel" HorizontalAlignment="Center" Foreground="#605856" Background="Transparent" Margin="5" FontSize="48" BorderBrush="Transparent" FontFamily="Pristina"></Label>
+            <Button Click="Share_OnClick" Foreground="#605856" Background="Transparent" Margin="5" FontSize="48" BorderBrush="Transparent" FontFamily="Pristina">Share</Button>
+            <Button Click="Repeat_OnClick" Foreground="#605856" Background="Transparent" Margin="5" FontSize="48" BorderBrush="Transparent" FontFamily="Pristina">Repeat</Button>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,20 @@
+﻿<Page x:Class="LoveCalculatorApp.Pages.InputPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LoveCalculatorApp.Pages"
+      mc:Ignorable="d" 
+      Background="#EFB0A1">
+    <Grid>
+        <StackPanel>
+            <Label HorizontalAlignment="Center" Foreground="#605856" Background="Transparent" Margin="5" FontSize="48" BorderBrush="Transparent" FontFamily="Pristina">Your date of birth</Label>
+            <DatePicker x:Name="firstDatePicker" Background="Transparent" Foreground="#605856" FontSize="24"  BorderBrush="Transparent"></DatePicker>
+            <Label x:Name="secondDateLabel" HorizontalAlignment="Center" Foreground="#605856" Background="Transparent" Margin="5" FontSize="48" BorderBrush="Transparent" FontFamily="Pristina">Their date of birth</Label>
+            <DatePicker x:Name="secondDatePicker" Background="Transparent" Foreground="#605856" FontSize="24" BorderBrush="Transparent"></DatePicker>
+            <Button x:Name="CombineButton" Click="Combine_OnClick" Foreground="#605856" Background="Transparent" Margin="5" FontSize="48" BorderBrush="Transparent" FontFamily="Pristina">Combine</Button>
+            <Button x:Name="MatchButton" Click="Match_OnClick" Foreground="#605856" Background="Transparent" Margin="5" FontSize="48" BorderBrush="Transparent" FontFamily="Pristina">Find Perfect match</Button>
+
+        </StackPanel>
+    </Grid>
+</Page>

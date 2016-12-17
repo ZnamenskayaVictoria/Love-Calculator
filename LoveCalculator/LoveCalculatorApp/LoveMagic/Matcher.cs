@@ -25,13 +25,13 @@ namespace LoveCalculatorApp.LoveMagic
             // so we need to check all cases and find shortest TimeSpan
             List<TimeSpan> possibleResults = new List<TimeSpan>()
             {
-                new DateTime(1995, first.Month, first.Day) - new DateTime(1995, second.Month, second.Day),
-                new DateTime(1996, first.Month, first.Day) - new DateTime(1995, second.Month, second.Day),
+                new DateTime(1996, first.Month, first.Day) - new DateTime(1996, second.Month, second.Day),
+                new DateTime(1996, first.Month, first.Day) - new DateTime(1995, second.Month, (second.Month == 2 && second.Day == 29) ? 27 : second.Day),
                 new DateTime(1996, second.Month, second.Day) - new DateTime(1995, first.Month, first.Day)
             };
 
             // convert to days, take absolute value and pick smallest
-            return (int) possibleResults.ConvertAll(ts=>Math.Abs(ts.TotalDays)).Min();
+            return (int) possibleResults.ConvertAll(ts => Math.Abs(ts.TotalDays)).Min();
         }
 
         /// <summary>
@@ -59,7 +59,8 @@ namespace LoveCalculatorApp.LoveMagic
                 return maxPercentage; // perfect match
 
             // calculate daily decreace of percentage
-            double percentPerDay = ((double) (maxPercentage - lowestPercentage))/(daysInYear - maxPerfectDayDifferential);
+            double percentPerDay = ((double) (maxPercentage - lowestPercentage))/
+                                   (daysInYear - maxPerfectDayDifferential);
 
             // calculate answer
             return maxPercentage - (sumDayDifferential - maxPerfectDayDifferential)*percentPerDay;
