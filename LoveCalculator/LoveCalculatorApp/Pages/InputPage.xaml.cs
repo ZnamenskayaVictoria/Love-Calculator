@@ -26,6 +26,7 @@ namespace LoveCalculatorApp.Pages
             InitializeComponent();
         }
 
+        // hide fields used for combining
         public void ShowMatch()
         {
             secondDateLabel.Visibility = Visibility.Collapsed;
@@ -33,6 +34,7 @@ namespace LoveCalculatorApp.Pages
             CombineButton.Visibility = Visibility.Collapsed;
         }
 
+        // hide fields used for matching
         public void ShowCombine()
         {
             MatchButton.Visibility = Visibility.Collapsed;
@@ -54,14 +56,18 @@ namespace LoveCalculatorApp.Pages
                          $" and {second.Value.ToString("MMMM", CultureInfo.InvariantCulture)} {second.Value.Day}" +
                          $" are compatible by {res:f2}%" +
                          $"\n\nvia Love Calculator";
+
+            //set new page
             ((NavigationWindow) this.Parent).Content = op;
         }
 
         private void Match_OnClick(object sender, RoutedEventArgs e)
         {
             Matcher matcher = new Matcher();
+
             DateTime? person = firstDatePicker.SelectedDate;
             if (person == null) return;
+
             DateTime res = matcher.GetPerfectMatch(person.Value);
 
             OutputPage op = new OutputPage();
@@ -70,6 +76,8 @@ namespace LoveCalculatorApp.Pages
                 $" is person, who was born {res.ToString("MMMM", CultureInfo.InvariantCulture)} {res.Day}" +
                 $"\n\nvia Love Calculator";
             op.ShowMatch(res);
+
+            //set new page
             ((NavigationWindow) this.Parent).Content = op;
         }
     }

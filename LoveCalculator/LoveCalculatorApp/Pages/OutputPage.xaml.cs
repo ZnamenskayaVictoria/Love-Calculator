@@ -25,13 +25,18 @@ namespace LoveCalculatorApp.Pages
         {
             InitializeComponent();
         }
+
+        //property to store message to post
         public string Message { get; set; }
+
+        //hide reundant info and show result
         public void ShowCompatibility(double percent)
         {
             MatchLabel.Visibility = Visibility.Collapsed;
             ResultLabel.Content = percent.ToString("f2") + "%";
         }
 
+        //hide reundant info and show result
         public void ShowMatch(DateTime match)
         {
             CompLabel.Visibility = Visibility.Collapsed;
@@ -46,11 +51,13 @@ namespace LoveCalculatorApp.Pages
                 Background = Background
             };
             
+            //open login form
             vkLogin.ShowDialog();
         }
 
         private void Repeat_OnClick(object sender, RoutedEventArgs e)
         {
+            //open startup page
             ((NavigationWindow)this.Parent).Content = new StartupPage();
         }
     }

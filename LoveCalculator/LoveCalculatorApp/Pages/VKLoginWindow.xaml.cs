@@ -24,7 +24,10 @@ namespace LoveCalculatorApp.Pages
             WindowStartupLocation = WindowStartupLocation.CenterOwner;
             InitializeComponent();
         }
+
+        //property to store message to post
         public string Message { get; set; }
+
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(loginTB.Text) || string.IsNullOrEmpty(passwordPB.Password)) return;

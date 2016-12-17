@@ -12,6 +12,12 @@ namespace LoveCalculatorApp.VKInteraction
     {
         private ulong appID = 5779403;
         
+        /// <summary>
+        /// Post message on the wall 
+        /// </summary>
+        /// <param name="login">Login to VK</param>
+        /// <param name="password">Password</param>
+        /// <param name="message">Message to post</param>
         public void Share(string login, string password, string message)
         {
             VkApi api = new VkApi();
