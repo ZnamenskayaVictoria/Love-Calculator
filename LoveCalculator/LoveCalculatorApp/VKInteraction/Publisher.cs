@@ -11,7 +11,7 @@ namespace LoveCalculatorApp.VKInteraction
 {
     class Publisher
     {
-        private ulong appID = 5779403;
+        private ulong appID = 5783257;
 
         /// <summary>
         /// Post message on the wall 
