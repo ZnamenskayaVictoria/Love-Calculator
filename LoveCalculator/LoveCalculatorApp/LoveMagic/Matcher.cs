@@ -54,7 +54,7 @@ namespace LoveCalculatorApp.LoveMagic
                 GetDistanceBetweenDates(person, belovedsMatch);
             // its maximum is 365 because max possible distance between each pair of dates is half of year
 
-            // lets give them chance and consider less than 30 days as small differential 
+            // lets give them chance and consider less than 100 days as small differential 
             if (sumDayDifferential <= maxPerfectDayDifferential)
                 return maxPercentage; // perfect match
 
@@ -66,8 +66,8 @@ namespace LoveCalculatorApp.LoveMagic
             return maxPercentage - (sumDayDifferential - maxPerfectDayDifferential)*percentPerDay;
         }
 
-        private const int maxPerfectDayDifferential = 30;
-        private const int lowestPercentage = 0;
+        private const int maxPerfectDayDifferential = 60;
+        private const int lowestPercentage = 20;
         private const int maxPercentage = 100;
         private const int daysInYear = 365;
 

@@ -52,7 +52,7 @@ namespace LoveCalculatorApp.Pages
 
             OutputPage op = new OutputPage();
             op.ShowCompatibility(res);
-            op.Message = $"Those who was born at {first.Value.ToString("MMMM", CultureInfo.InvariantCulture)} {first.Value.Day}" +
+            op.Message = $"Those who were born at {first.Value.ToString("MMMM", CultureInfo.InvariantCulture)} {first.Value.Day}" +
                          $" and {second.Value.ToString("MMMM", CultureInfo.InvariantCulture)} {second.Value.Day}" +
                          $" are compatible by {res:f2}%" +
                          $"\n\nvia Love Calculator";
