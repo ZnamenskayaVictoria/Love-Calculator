@@ -24,7 +24,7 @@ namespace DataCollection
         {
             var authparams = new ApiAuthParams
             {
-                ApplicationId = 5779403,
+                ApplicationId = 5783257,
                 Login = login,
                 Password = pass,
                 Settings = Settings.All
